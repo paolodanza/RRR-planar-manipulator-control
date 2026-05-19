@@ -1,0 +1,12 @@
+# File di salvataggio automatico di script MATLAB
+*.asv
+
+# File di cache di Simulink
+*.slxc
+
+# Cartella di sistema e temporanea di Simulink 
+slprj/
+
+# File di backup di Simulink
+*.autosave
+*.bak
