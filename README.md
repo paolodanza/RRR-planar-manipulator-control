@@ -37,8 +37,19 @@ Controlling a 3-link (RRR) robot presents significant challenges due to non-line
 └── 📄 README.md            # Project documentation
 ```
 
-## Mathematical & Control FrameworkDynamic Model
-The equations of motion of the 3-link planar manipulator are expressed in the joint space as:$$ B(q)\ddot{q} + C(q, \dot{q})\dot{q} + G(q) = \tau + \tau_d $$Where $q, \dot{q}, \ddot{q}$ represent the joint positions, velocities, and accelerations, $\tau$ is the control torque vector input, and $\tau_d$ represents external disturbances/uncertainties.Robust Control StrategyThe synthesized controller ensures that the tracking error $e(t) = q_d(t) - q(t)$ asymptotically converges to zero or remains bounded within a strict threshold, even in the presence of bounds on parameter variations (e.g., payload mass uncertainty).🚀 How to RunClone this repository to your local machine.Open MATLAB and navigate to the project folder.Run init_robot.m first. This script initializes the robot workspace parameters, controller gains, and reference trajectories.Open the Simulink model controllo_v1.slx.Click Run in Simulink to execute the simulation and view the scope results (tracking errors, joint torques).
+## Mathematical & Control Framework
+### Dynamic Model
+The equations of motion of the 3-link planar manipulator are expressed in the joint space as:
+
+$$B(q)\ddot{q} + C(q, \dot{q})\dot{q} + G(q) = \tau + \tau_d$$
+
+Where:
+* $q, \dot{q}, \ddot{q}$ represent the joint positions, velocities, and accelerations.
+* $\tau$ is the control torque vector input.
+* $\tau_d$ represents external disturbances and uncertainties.
+
+### Robust Control Strategy
+The synthesized controller ensures that the tracking error $e(t) = q_d(t) - q(t)$ asymptotically converges to zero or remains bounded within a strict threshold, even in the presence of bounds on parameter variations (e.g., payload mass uncertainty).
 
 ## Author
 * **Paolo Danza**
